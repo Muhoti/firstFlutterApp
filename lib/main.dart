@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MaterialApp(
+void main() => runApp(MaterialApp(
       home: NinjaCard(),
     ));
 
 class NinjaCard extends StatefulWidget {
-
-  int ninjaLevel = 0;
-
   @override
   State<NinjaCard> createState() => _NinjaCardState();
 }
 
 class _NinjaCardState extends State<NinjaCard> {
+  int ninjaLevel = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +23,10 @@ class _NinjaCardState extends State<NinjaCard> {
         elevation: 0.0,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           setState(() {
-             ninjaLevel += 1;
-          }),
+            ninjaLevel += 1;
+          });
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.grey[600],
